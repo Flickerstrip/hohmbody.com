@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+rsync -apvvz --delete ./forums.hohmbody.com/styles/we_universal/* reflowst@reflowster.com:/home/reflowst/forums.hohmbody.com/styles/we_universal/
