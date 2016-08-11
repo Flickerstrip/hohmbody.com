@@ -87,7 +87,7 @@
     });
 
     // 9.0 Jquery Smooth Scroll
-    $('.smoth-scroll a').bind('click',function (event) {
+    $('a.smooth-anchor').bind('click',function (event) {
         var $anchor = $(this);
         var headerH = '74';
         $('html, body').stop().animate({
@@ -96,18 +96,9 @@
         event.preventDefault();
     });
 
-    // 10.0 Menu Close Button
-    $('.menuCloseBtn').on('click', function(){
-        $(this).toggleClass('Cross');
-        body.toggleClass('menuEffect');
-    });
-    $('.navbar-toggle').on('click', function(){
-        body.toggleClass('menuEffect');
-    });
     if( windowWidth < 768 ){
         $('ul#nav li a').on('click', function(){
             $('#bs-example-navbar-collapse-1').toggleClass('in');
-            body.toggleClass('menuEffect');
         });
     }
     
