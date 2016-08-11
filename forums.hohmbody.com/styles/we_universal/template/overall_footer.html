@@ -39,6 +39,18 @@
 <!-- INCLUDEJS forum_fn.js -->
 <!-- INCLUDEJS ajax.js -->
 
+<script type="text/javascript">
+(function($) {
+    $(document).ready(function() {
+        $(".header-area .navbar-toggle").click(function() {
+            $(".header-area .mainmenu").toggle();
+        });
+    });
+})(jQuery);
+</script>
+
+
+
 <!-- EVENT overall_footer_after -->
 
 <!-- IF S_PLUPLOAD --><!-- INCLUDE plupload.html --><!-- ENDIF -->

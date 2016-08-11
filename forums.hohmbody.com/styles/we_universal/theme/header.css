@@ -2,20 +2,48 @@
 2.    Start Header CSS
 =============================================== */
 
-.header-area .col-sm-2, .header-area .col-sm-10 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+.header-area {
+    height: 75px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
 }
-@media (min-width: 768px)
-.header-area .col-sm-2 { width: 16.66666667%; }
 
-@media (min-width: 768px)
-.header-area .col-sm-2, .header-area .col-sm-10 { float: left; }
+.header-area #navigation {
+    padding-top: 0px;
+}
 
-@media (min-width: 768px)
-.header-area .col-sm-10 { width: 83.33333333%; }
+.header-area #navigation li {
+    display: inline-block;
+}
+
+.header-area img.invert {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+.header-area .container {
+    width: 1170px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.header-area .mainmenu {
+    position: relative;
+    top: 1px;
+    right: 1px;
+}
+
+.header-area .navbar-header {
+    display: none;
+}
+
+.header-area .logo {
+    display: inline-block !important;
+}
+
+/* END HACKS TO GET THIS WORKING IN A DIFFERENT THEME */
 
 .header-area {
     background-color: rgba(0, 0, 0, 0.3);
@@ -25,9 +53,13 @@
     transition: background-color 0.25s cubic-bezier(0, 0, 0, .6) 0s;
 }
 
-.logo {
-    margin-bottom: 26px;
-    margin-top: 25px;
+.header-area .logo {
+    height: 35px;
+    padding: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    position: relative;
+    top: 1px;
 }
 
 .logo img {
@@ -35,16 +67,36 @@
     width: auto;
 }
 
+.header-area .sr-only {
+    display: none;
+}
+
+.header-area .navbar-toggle {
+    padding: 10px;
+    color: transparent;
+    background-color: transparent;
+    border: none;
+}
+
 .navbar-toggle .icon-bar {
     background: #3498db;
+    height: 2px;
+    width: 17px;
+    display: block;
+    margin-bottom: 3px;
 }
 
 ul#nav {
+    text-align: right;
+    font-size: 0;
     padding-right: 82px;
 }
 
 .mainmenu ul.nav li {
     position: relative;
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 1px;
 }
 
 .mainmenu ul.nav li a {
@@ -173,6 +225,7 @@ ul#nav {
 }
 
 .mainmenu nav.navbar {
+    padding: 0;
     margin: -1px 0;
 }
 
@@ -307,3 +360,84 @@ form.search-box {
     padding-left: 25px;
 }
 
+
+
+@media (min-width: 768px) {
+    .header-area .container {
+        width: 750px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .header-area .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header-area .container {
+        width: 1170px;
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+    .header-area .container {
+        width: 450px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .header-area .container {
+        width: 300px;
+    }
+    .header-area .navbar-header {
+        display: inline-block;
+    }
+
+    .header-area .logo {
+        text-align: center;
+        width: 100%;
+    }
+
+    .header-area .mainmenu {
+        display: none;
+    }
+
+    .header-area .mainmenu {
+        background: black;
+        width: 100%;
+        position: absolute;
+        top: 75px;
+    }
+
+    .header-area ul#nav {
+        text-align: center;
+        padding-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .header-area .container {
+        width: 750px;
+    }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    ul#nav {
+        padding-right: 75px;
+    }
+    .mainmenu ul.nav li a {
+        padding: 5px 20px;
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .mainmenu ul#nav li > a {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+    ul#nav {
+        padding-right: 30px;
+    }
+}

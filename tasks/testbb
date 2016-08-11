@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-rsync -apvvz --delete forums.hohmbody.com/* /Library/WebServer/Documents/phpbb/
+rsync -ua --delete forums.hohmbody.com/* /Library/WebServer/Documents/phpbb/
 sudo chmod -R g+r /Library/WebServer/Documents/phpbb
 sudo chmod -R g+x /Library/WebServer/Documents/phpbb
 sudo chmod -R a+w /Library/WebServer/Documents/phpbb/cache
+sudo chmod a+r /Library/WebServer/Documents/phpbb/config.php
 rm -rf /Library/WebServer/Documents/phpbb/cache/*
 
