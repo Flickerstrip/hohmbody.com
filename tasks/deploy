@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-touch blog/tmp/restart.txt
-chmod -R a+r blog && rsync -apvvz --delete blog reflowst@reflowster.com:~/hohmbody.com/
-ssh -t reflowst@reflowster.com 'ln -s /home/reflowst/hohmbody.com/blog/ghost/content/themes/hohmbody/assets /home/reflowst/hohmbody.com/blog/public/; ln -s /home/reflowst/hohmbody.com/blog/ghost/core/shared /home/reflowst/hohmbody.com/blog/public/; chmod -R o-w /home/reflowst/hohmbody.com/; chmod -R g-w /home/reflowst/hohmbody.com/'

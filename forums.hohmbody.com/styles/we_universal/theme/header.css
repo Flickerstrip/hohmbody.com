@@ -2,6 +2,10 @@
 2.    Start Header CSS
 =============================================== */
 
+.inventea-headerbar {
+    margin-top: 75px;
+}
+
 .header-area {
     height: 75px;
     position: fixed;
