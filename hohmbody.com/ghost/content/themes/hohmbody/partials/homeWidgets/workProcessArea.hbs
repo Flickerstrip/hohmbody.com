@@ -1,0 +1,60 @@
+{{contextualize . '
+  {
+    "items":[
+      {
+        "icon":"icon-lightbulb",
+        "title":"App Control",
+        "image":"images/fsbubbles/app.png"
+      },
+      {
+        "icon":"icon-mobile",
+        "title":"Mood lighting",
+        "image":"images/fsbubbles/mood.jpg"
+      },
+      {
+        "icon":"icon-layers",
+        "title":"Party lights",
+        "image":"images/fsbubbles/party.jpg"
+      },
+      {
+        "icon":"icon-layers",
+        "title":"Custom patterns",
+        "image":"images/fsbubbles/custom.jpg"
+      },
+      {
+        "icon":"icon-layers",
+        "title":"Online repository",
+        "image":"images/fsbubbles/online.jpg"
+      }
+    ]
+  }
+'}}
+
+<!-- ================= Start Work Process Area ================= -->
+<section id="work-process-area">
+    <div class="section-padding-dark text-center">
+        <div class="container">
+            <div class="row">
+                <!-- Section Title -->
+                <div class="section_title_white margin-bottom-70">
+                    <h2><a href="/flickerstrip">Flickerstrip</a></h2>
+                    <p>Download endless dancing LED decorations to set the mood or energize the party</p>
+                </div>
+
+                <div class="work-process-content">
+                    {{#each items}}
+                    <div class="single-work-process floatleft">
+                        <div class="work-process-icon" style="background-image: url({{asset this.image}})">
+                            <i class="{{this.icon}}"></i>
+                        </div>
+                        <h6>{{this.title}}</h6>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </div>
+</section>
+<!-- ================= End Work Process Area ================= -->

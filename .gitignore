@@ -1,3 +1,5 @@
 *.swp
 config.php
 cache
+config.js
+node_modules

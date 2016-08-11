@@ -1,0 +1,41 @@
+{{contextualize . '
+  {
+    "features":[
+      {
+        "icon":"icon-trophy",
+        "title":"Intelligence",
+        "body":"Tech that lets your home understand you. Your gadgets should adapt to your needs, not the other way around."
+      },
+      {
+        "icon":"icon-mobile",
+        "title":"Personalization",
+        "body":"Your home should feel like it||s yours. It fits your taste, no matter how eclectic they happen to be."
+      },
+      {
+        "icon":"icon-layers",
+        "title":"Convenience",
+        "body":"Control at your fingertips and closer. Don||t get stuck reaching for your smartphone when there||s a better way."
+      }
+    ]
+  }
+'}}
+
+<!-- ================= Start Features Area ================= -->
+<section id="features-area" class="text-center">
+    <div class="container no-padding">
+        <div class="row">
+            {{#each features}}
+            <div class="col-sm-4">
+                <div class="features-content">
+                    <div class="featureIcon">
+                        <i class="{{this.icon}}"></i>
+                    </div>
+                    <h2>{{this.title}}</h2>
+                    <p>{{this.body}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
+<!-- ================= End Features Area ================= -->
