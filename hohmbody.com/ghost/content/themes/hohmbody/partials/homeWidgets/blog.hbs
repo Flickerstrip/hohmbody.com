@@ -1,96 +1,49 @@
 <!-- ================= Start Blog Area ================= -->
 <section id="blog-area">
     <div class="container section-padding">
+        {{!--
         <div class="row">
             <div class="col-md-12">
                 <!-- Single Title -->
                 <div class="section_title_black text-center margin-bottom-60">
-                    <h2>Blog & News</h2>
+                    <h2>Blog &amp; News</h2>
                     <p>It’s quality and modern PSD template. It is an elegant solution for corporate business, portfolio sites.</p>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="row">
+          <div class="col-sm-4">
+          </div>
+          {{#foreach posts}}
             <!-- Single Blog Area Start -->
             <div class="col-sm-4">
-                <div class="single-blog text-center">
+                <div class="single-blog text-center {{post_class}}">
                     <!-- Single Blog Image -->
-                    <img src="{{asset "/theme_images/blog-images/blog-1.jpg"}}" alt="Blog Image">
-                    <div class="blog-status-bar">
-                        <span><i class="fa fa-heart"></i> 24</span>
-                        <span><i class="fa fa-calendar"></i> 25 Nov</span>
-                        <span><i class="fa fa-comments"></i> 19</span>
+                    <img src="{{image}}" alt="{{title}}">
+                    <div class="blog-status-bar" style="margin-left: calc(50% - 87px);">
+                        {{!-- <span><i class="fa fa-heart"></i> 24</span> --}}
+                        <span><i class="fa fa-calendar"></i>{{date published_at format="MMMM DD, YYYY"}}</span>
+                        {{!-- <span><i class="fa fa-comments"></i> 19</span> --}}
                     </div>
                     <!-- Single Blog Title -->
                     <div class="blog-title">
-                        <h3><a href="single-blog.html">Web Development Tutorial</a></h3>
-                        <p><i class="fa fa-user"></i><a href="#!">Admin</a></p>
-                        <p><i class="fa fa-tags"></i><a href="#!">apps development</a>, <a href="#!">tutorials</a></p>
+                        <h3><a href="{{url}}">{{title}}</a></h3>
+                        <p><i class="fa fa-user"></i>{{author}}</p>
+                        <p><i class="fa fa-tags"></i>{{tags}}</p>
                     </div>
                     <!-- Single Blog Details -->
                     <div class="blog-details">
-                        <p>Lorem ipsum dolor gone sit amet, consecte to adipisicing elit, sed fg how do eiusmod tempor incididunt ut labore et dolore magna. Ut enim ad minim done gut no veniam, quis nost...</p>
+                        <p>{{excerpt words="26"}}</p>
                     </div>
                     <div class="blog_button">
-                        <a href="single-blog.html">Read More</a>
+                        <a href="{{url}}">Read More</a>
                     </div>
                 </div>
             </div>
             <!-- Single Blog Area End -->
-
-            <!-- Single Blog Area Start -->
+            {{/foreach}}
             <div class="col-sm-4">
-                <div class="single-blog text-center">
-                    <!-- Single Blog Image -->
-                    <img src="{{asset "/theme_images/blog-images/blog-2.jpg"}}" alt="Blog Image">
-                    <div class="blog-status-bar">
-                        <span><i class="fa fa-heart"></i> 24</span>
-                        <span><i class="fa fa-calendar"></i> 25 Nov</span>
-                        <span><i class="fa fa-comments"></i> 19</span>
-                    </div>
-                    <!-- Single Blog Title -->
-                    <div class="blog-title">
-                        <h3><a href="single-blog.html">Software Development</a></h3>
-                        <p><i class="fa fa-user"></i><a href="#!">Admin</a></p>
-                        <p><i class="fa fa-tags"></i><a href="#!">apps development</a>, <a href="#!">tutorials</a></p>
-                    </div>
-                    <!-- Single Blog Details -->
-                    <div class="blog-details">
-                        <p>Lorem ipsum dolor gone sit amet, consecte to adipisicing elit, sed fg how do eiusmod tempor incididunt ut labore et dolore magna. Ut enim ad minim done gut no veniam, quis nost...</p>
-                    </div>
-                    <div class="blog_button">
-                        <a href="single-blog.html">Read More</a>
-                    </div>
-                </div>
             </div>
-            <!-- Single Blog Area End -->
-
-            <!-- Single Blog Area Start -->
-            <div class="col-sm-4">
-                <div class="single-blog text-center">
-                    <!-- Single Blog Image -->
-                    <img src="{{asset "/theme_images/blog-images/blog-3.jpg"}}" alt="Blog Image">
-                    <div class="blog-status-bar">
-                        <span><i class="fa fa-heart"></i> 24</span>
-                        <span><i class="fa fa-calendar"></i> 25 Nov</span>
-                        <span><i class="fa fa-comments"></i> 19</span>
-                    </div>
-                    <!-- Single Blog Title -->
-                    <div class="blog-title">
-                        <h3><a href="single-blog.html">Apps Development Tutorial</a></h3>
-                        <p><i class="fa fa-user"></i><a href="#!">Admin</a></p>
-                        <p><i class="fa fa-tags"></i><a href="#!">apps development</a>, <a href="#!">tutorials</a></p>
-                    </div>
-                    <!-- Single Blog Details -->
-                    <div class="blog-details">
-                        <p>Lorem ipsum dolor gone sit amet, consecte to adipisicing elit, sed fg how do eiusmod tempor incididunt ut labore et dolore magna. Ut enim ad minim done gut no veniam, quis nost...</p>
-                    </div>
-                    <div class="blog_button">
-                        <a href="single-blog.html">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Single Blog Area End -->
         </div>
     </div>
 </section>
