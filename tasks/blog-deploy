@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 touch hohmbody.com/tmp/restart.txt
-chmod -R a+r hohmbody.com && rsync -apvvz --delete hohmbody.com/* reflowst@reflowster.com:~/hohmbody.com/blog/
+chmod -R a+r hohmbody.com && rsync -apvvz hohmbody.com/* reflowst@reflowster.com:~/hohmbody.com/blog/
 ssh -t reflowst@reflowster.com 'rm /home/reflowst/hohmbody.com/blog/public/assets; rm /home/reflowst/hohmbody.com/blog/public/shared; ln -s /home/reflowst/hohmbody.com/blog/ghost/content/themes/hohmbody/assets /home/reflowst/hohmbody.com/blog/public/; ln -s /home/reflowst/hohmbody.com/blog/ghost/core/shared /home/reflowst/hohmbody.com/blog/public/; chmod -R o-w /home/reflowst/hohmbody.com/; chmod -R g-w /home/reflowst/hohmbody.com/'
